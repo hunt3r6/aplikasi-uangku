@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="12dp">
+
+        <View
+            android:id="@+id/viewTop"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/wave1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/wave1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewTop" />
+
+        <View
+            android:id="@+id/wave2"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@drawable/wave2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewTop" />
+
+        <View
+            android:id="@+id/wave3"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/wave3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewTop" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/title"
+            android:textColor="@android:color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSlogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/slogan"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/logo_uangku"
+            app:civ_circle_background_color="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSlogan" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_username"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgLogo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_account_circle"
+                android:drawableLeft="@drawable/ic_account_circle"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/nunito_light"
+                android:hint="Username"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tl_username"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/nunito_light"
+                android:hint="Password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_login"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:fontFamily="@font/nunito_bold"
+            android:text="Masuk"
+            app:icon="@drawable/ic_lock_open"
+            app:iconGravity="textStart"
+            app:iconPadding="10dp"
+            app:iconSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tl_password"
+            app:rippleColor="@color/colorAccent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_forgot_password"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="1dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="@font/nunito_bold"
+            android:text=" Lupa Password"
+            app:icon="@drawable/ic_error_outline"
+            app:iconGravity="textStart"
+            app:iconPadding="15dp"
+            app:iconSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login"
+            app:rippleColor="@color/colorAccent" />
+
+        <LinearLayout
+            android:layout_marginTop="24dp"
+            android:id="@+id/llRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_forgot_password">
+
+            <TextView
+                android:id="@+id/tvTitleRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Belum punya akun?" />
+
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="Buat Sekarang!"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
